@@ -15,6 +15,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    perspective: 150rem;
 
 }
 
@@ -23,5 +24,77 @@ html {
     height: 20rem;
     background-color: rgba(206, 216, 91, 0.7);
     transform: rotateX(70deg) rotateZ(-40deg) rotateY(5deg);
-   
+    transform-style: preserve-3d;
 }
+
+.swing::before {
+    content: "";
+    width: 1rem;
+    height: 100%;
+    background-color: #b4bb65;
+    position: absolute;
+    transform: rotateY(90deg);
+    transform-origin: left;
+}
+
+.swing::after {
+    content: "";
+    height: 1rem;
+    width: 100%;
+    background-color: #e2ec6c;
+    position: absolute;
+    bottom: 0;
+    transform: rotateX(90deg);
+    transform-origin: bottom;
+}
+
+.circle {
+    width: 3rem;
+    height: 3rem;
+    background-color: #c5c757;
+    border-radius: 50%;
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+.circle-1 {
+    top: 1rem;
+    left: 1rem;
+}
+
+.circle-2 {
+    top: 1rem;
+    right: 1rem;
+}
+
+.circle-3 {
+    bottom: 1rem;
+    right: 1rem;
+}
+
+.circle-4 {
+    bottom: 1rem;
+    left: 1rem;
+}
+
+.circle::before {
+    content: "";
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: #e9d8d8;
+    position: absolute;
+    border-radius: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
